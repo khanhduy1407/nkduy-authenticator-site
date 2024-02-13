@@ -1,0 +1,34 @@
+<script setup>
+import { ref } from 'kdu';
+
+import ContentBx from '../components/ContentBx.kdu'
+import Sci from '../components/Sci.kdu';
+
+const imgSrc = ref([
+  { url: "preview_1.png" },
+  { url: "preview_2.png" },
+  { url: "preview_3.png" },
+  { url: "preview_4.png" },
+  { url: "preview_5.png" },
+]);
+
+const urls = ref([
+  { link: "mailto:nkduy.dev@gmail.com", icon: "mail-open" },
+  { link: "https://www.facebook.com/khanhduy1407", icon: "logo-facebook" },
+  { link: "https://github.com/kdu-platforms-apps", icon: "logo-github" },
+]);
+</script>
+
+<template>
+  <ContentBx
+    appName="Kdu Authenticator"
+    description="Kdu Authenticator is a free, secure for Android to manage your 2-step verification tokens for your online services."
+    playStoreLink="https://play.google.com/store/apps/details?id=com.nkduy.authenticator"
+    appleStoreLink=""
+    :imgSrc="imgSrc"
+  />
+
+  <Sci
+    :urls="urls"
+  />
+</template>
